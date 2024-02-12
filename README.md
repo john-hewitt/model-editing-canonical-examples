@@ -2,10 +2,10 @@
   <img src="assets/header.png" width="550" title="hover text" alt=".">
 </p>
 
-## Learning from Canonical Examples
+## Model Editing with Canonical Examples
 This codebase provides the code and datasets for replicating the paper _Model Editing with Canonical Examples_.
 
-The goal of learning from canonical examples is to take as input simple examples of desirable or undesirable behaviors, and update a language model to behave better with respect to those examples in general without otherwise changing anything.
+The goal of model editing with canonical examples is to take as input simple examples of desirable or undesirable behaviors, and update a language model to behave better with respect to those examples in general without otherwise changing anything.
 The setting draws from **model editing** and **out-of-distribution evaluation**, and is intended to be a general testbed for making **targeted improvements to language models**.
 
 ### Getting started
