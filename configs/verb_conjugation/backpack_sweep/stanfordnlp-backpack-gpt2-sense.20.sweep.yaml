@@ -1,0 +1,29 @@
+device: cuda
+logfile: backpackresults/stanfordnlp-backpack-gpt2-verb-sense-lr1.54E-04-epochs10-regtypeKL-regw5.46E-01-sensec6-sensereg1000.out.seed1
+model: stanfordnlp/backpack-gpt2
+resultsfile: backpackresults/stanfordnlp-backpack-gpt2-verb-sense-lr1.54E-04-epochs10-regtypeKL-regw5.46E-01-sensec6-sensereg1000.results.out.seed1
+seed: 1
+senses:
+  background_data_path: data/trainval-chunked.jsonl
+  max_senses_per_example: 6
+  max_senses_total: 0
+  regularization_lambda: 1000
+  sense_method: alpha
+threshold: -2.772588722239781
+training:
+  batch_size: 1
+  dataset_path: data/verb_conjugation/split/verb_conjugation_train-val.jsonl
+  finetune_type: senses
+  grad_acc_steps: 5
+  learning_rate: 0.0001543063301693293
+  loss_type: good-v-bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.545638080155256
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/verb_conjugation/split/verb_conjugation_eval_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/verb_conjugation/split/verb_conjugation_eval-val.jsonl

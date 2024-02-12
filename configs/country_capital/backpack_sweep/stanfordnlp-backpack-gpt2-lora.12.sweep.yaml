@@ -1,0 +1,28 @@
+device: cuda
+logfile: backpackresults/stanfordnlp-backpack-gpt2-country-lora-llr8.56E-06-epochs10-regtypeKL-regw5.43E-01-lorarank217-loratgt4to9.out.seed1
+model: stanfordnlp/backpack-gpt2
+resultsfile: backpackresults/stanfordnlp-backpack-gpt2-country-lora-llr8.56E-06-epochs10-regtypeKL-regw5.43E-01-lorarank217-loratgt4to9.results.out.seed1
+seed: 1
+threshold: 1.6094379124341003
+training:
+  batch_size: 1
+  dataset_path: data/country_capital/split/country_capital_fixed-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 8.559179641472529e-06
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 217
+    target_modules: .*\.(4|5|6|7|8|9)\.mlp\.(c_proj|c_fc)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.5430751543218408
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-val.jsonl

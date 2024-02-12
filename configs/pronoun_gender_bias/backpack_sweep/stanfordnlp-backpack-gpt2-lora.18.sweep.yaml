@@ -1,0 +1,28 @@
+device: cuda
+logfile: backpackresults/stanfordnlp-backpack-gpt2-gender-lora-lr1.45E-05-epochs10-regtypeKL-regw1.95E-01-lorarank130-loratgt4to9.out.seed1
+model: stanfordnlp/backpack-gpt2
+resultsfile: backpackresults/stanfordnlp-backpack-gpt2-gender-lora-lr1.45E-05-epochs10-regtypeKL-regw1.95E-01-lorarank130-loratgt4to9.results.out.seed1
+seed: 1
+threshold: 0.4054651081081646
+training:
+  batch_size: 1
+  dataset_path: data/pronoun_gender_bias/split/pronoun_gender_bias_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 1.4505103470123582e-05
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 130
+    target_modules: .*\.(4|5|6|7|8|9)\.mlp\.(c_proj|c_fc)
+  loss_type: balance
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.19496499411466917
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/pronoun_gender_bias/split/pronoun_gender_bias_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/pronoun_gender_bias/split/pronoun_gender_bias_eval-val.jsonl

@@ -1,0 +1,22 @@
+device: cuda
+logfile: pythiaresults/stanfordnlp-backpack-gpt2-country-full-lr5.17E-06-epochs20-regtypeKL-regw7.34E-01.out
+model: stanfordnlp/backpack-gpt2
+resultsfile: pythiaresults/stanfordnlp-backpack-gpt2-country-full-lr5.17E-06-epochs20-regtypeKL-regw7.34E-01.results.out
+threshold: 1.6094379124341003
+training:
+  batch_size: 1
+  dataset_path: data/country_capital/split/country_capital_fixed-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 10
+  learning_rate: 5.172166530033871e-06
+  loss_type: good
+  num_epochs: 20
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.7338211016104479
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-val.jsonl

@@ -1,0 +1,21 @@
+device: cuda
+model: stanfordnlp/backpack-gpt2
+logfile: temporal.0.000006.out-val.jsonl
+training:
+  dataset_path: data/temporal/split/temporal_train-val.jsonl
+  batch_size: 16
+  num_epochs: 50
+  learning_rate: .0000001
+  finetune_type: senses
+  loss_type: good
+  suffix_pair: False
+validation:
+  eval_normalization: example
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-val.jsonl
+  degredation_general_path: data/val-chunked.jsonl
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-val.jsonl
+senses:
+  max_senses_per_example: 0
+  max_senses_total: 0
+  regularization_lambda: 1
+  background_data_path: data/trainval-chunked.jsonl

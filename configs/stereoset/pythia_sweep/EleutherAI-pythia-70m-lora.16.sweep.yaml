@@ -1,0 +1,28 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-70m-stereoset-lora-lr5.06E-05-epochs10-regtypeKL-regw1.07E-01-lorarank8-loratgt3to4.out.seed1
+model: EleutherAI/pythia-70m
+resultsfile: pythiaresults/EleutherAI-pythia-70m-stereoset-lora-lr5.06E-05-epochs10-regtypeKL-regw1.07E-01-lorarank8-loratgt3to4.results.out.seed1
+seed: 1
+threshold: -6.907755278982137
+training:
+  batch_size: 1
+  dataset_path: data/stereoset/split/stereoset_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 5.056736972634864e-05
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 8
+    target_modules: .*\.(3|4)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.10736460135544884
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-val.jsonl

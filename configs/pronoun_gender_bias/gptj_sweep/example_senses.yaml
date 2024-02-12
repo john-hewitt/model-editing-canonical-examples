@@ -1,0 +1,21 @@
+model: stanfordnlp/backpack-gpt2
+logfile: temporal-16-senses.out
+device: cuda
+training:
+  dataset_path: data/pronoun_gender_bias/split/pronoun_gender_bias_train-val.jsonl
+  batch_size: 16
+  num_epochs: 50
+  learning_rate: .01
+  finetune_type: senses
+  suffix_pair: True
+  loss_type: balance
+validation:
+  eval_normalization: example
+  degredation_targeted_path: data/pronoun_gender_bias/split/pronoun_gender_bias_unconditional-val.jsonl
+  degredation_general_path: data/val-chunked.jsonl
+  intervention_eval_path: data/pronoun_gender_bias/split/pronoun_gender_bias_eval-val.jsonl
+senses:
+  max_senses_per_example: 16
+  max_senses_total: 0
+  regularization_lambda: 1
+  background_data_path: data/trainval-chunked.jsonl

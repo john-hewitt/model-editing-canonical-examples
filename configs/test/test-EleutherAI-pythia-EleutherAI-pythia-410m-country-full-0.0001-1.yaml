@@ -1,0 +1,30 @@
+device: cuda
+league: '0.0001'
+logfile: testpythiaresults/EleutherAI-pythia-410m-country-full-lr2.02E-05-epochs10-regtypeKL-regw2.35E-01.out.seed1.league0.0001.seed1
+method: full
+model: EleutherAI/pythia-EleutherAI/pythia-410m
+resultsfile: testpythiaresults/EleutherAI-pythia-410m-country-full-lr2.02E-05-epochs10-regtypeKL-regw2.35E-01.results.out.seed1.league0.0001.seed1
+seed: 1
+success_rate: 0.05670103092783507
+task: country
+threshold: 1.6094379124341003
+training:
+  batch_size: 1
+  dataset_path: data/country_capital/split/country_capital_fixed-test.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 2.0247514853043073e-05
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.234570878789517
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/country_capital/split/country_capital_hard_neg-val.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-test.jsonl

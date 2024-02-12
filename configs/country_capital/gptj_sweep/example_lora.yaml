@@ -1,0 +1,22 @@
+device: cuda
+model: stanfordnlp/backpack-gpt2
+logfile: fullbp.0.000006.out-val.jsonl
+resultsfile: fullbp.0.000006.results-val.jsonl
+training:
+  dataset_path: data/country_capital/split/country_capital_fixed-val.jsonl
+  batch_size: 16
+  num_epochs: 20
+  learning_rate: .000002
+  finetune_type: lora
+  suffix_pair: False
+  loss_type: good
+  lora:
+    target_modules: '.*\.(4|5|6|7|8|9|10)\.mlp\.(c_proj|c_fc)'
+    lora_alpha: 8
+    lora_rank: 256
+    lora_dropout: 0.0
+validation:
+  eval_normalization: example
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-val.jsonl
+  degredation_general_path: data/val-chunked.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-val.jsonl

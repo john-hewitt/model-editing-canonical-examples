@@ -1,0 +1,28 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-410m-gender-lora-lr4.62E-04-epochs10-regtypeKL-regw4.91E-01-lorarank47-loratgt2to22.out.seed1
+model: EleutherAI/pythia-410m
+resultsfile: pythiaresults/EleutherAI-pythia-410m-gender-lora-lr4.62E-04-epochs10-regtypeKL-regw4.91E-01-lorarank47-loratgt2to22.results.out.seed1
+seed: 1
+threshold: 0.4054651081081646
+training:
+  batch_size: 1
+  dataset_path: data/pronoun_gender_bias/split/pronoun_gender_bias_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.0004620129770089551
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 47
+    target_modules: .*\.(2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: balance
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.49125016897314244
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/pronoun_gender_bias/split/pronoun_gender_bias_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/pronoun_gender_bias/split/pronoun_gender_bias_eval-val.jsonl

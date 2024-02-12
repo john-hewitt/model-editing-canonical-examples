@@ -1,0 +1,35 @@
+device: cuda
+league: '0.0001'
+logfile: testpythiaresults/EleutherAI-pythia-6.9b-stereoset-lora-lr3.22E-07-epochs10-regtypeKL-regw6.21E-01-lorarank102-loratgt9to23.out.seed1.league0.0001.seed3
+method: lora
+model: EleutherAI/pythia-6.9b
+resultsfile: testpythiaresults/EleutherAI-pythia-6.9b-stereoset-lora-lr3.22E-07-epochs10-regtypeKL-regw6.21E-01-lorarank102-loratgt9to23.results.out.seed1.league0.0001.seed3
+seed: 1
+success_rate: 0.6989553656220323
+task: stereoset
+threshold: -6.907755278982137
+training:
+  batch_size: 1
+  dataset_path: data/stereoset/split/stereoset_train-test.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 3.2240219182798035e-07
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 102
+    target_modules: .*\.(9|10|11|12|13|14|15|16|17|18|19|20|21|22|23)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.6206960136697021
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/stereoset/split/stereoset_hard_neg-val.jsonl
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-test.jsonl

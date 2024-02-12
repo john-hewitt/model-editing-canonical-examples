@@ -1,0 +1,30 @@
+device: cuda
+league: 1e-05
+logfile: testpythiaresults/EleutherAI-pythia-1.4b-stereoset-full-lr1.63E-06-epochs10-regtypeKL-regw5.72E-01.out.seed1.league1e-05.seed2
+method: full
+model: EleutherAI/pythia-1.4b
+resultsfile: testpythiaresults/EleutherAI-pythia-1.4b-stereoset-full-lr1.63E-06-epochs10-regtypeKL-regw5.72E-01.results.out.seed1.league1e-05.seed2
+seed: 1
+success_rate: 0.7160493827160495
+task: stereoset
+threshold: -6.907755278982137
+training:
+  batch_size: 1
+  dataset_path: data/stereoset/split/stereoset_train-test.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 1.633834065202898e-06
+  loss_type: bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.5722895316164494
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/stereoset/split/stereoset_hard_neg-val.jsonl
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-test.jsonl

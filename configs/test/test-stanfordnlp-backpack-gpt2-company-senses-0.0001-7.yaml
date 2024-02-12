@@ -1,0 +1,40 @@
+device: cuda
+league: '0.0001'
+logfile: testbackpackresults/stanfordnlp-backpack-gpt2-company-sense-lr1.55E-02-epochs10-regtypeKL-regw1.61E-01-sensec9-sensereg1000.out.seed1.league0.0001.seed7
+method: senses
+model: stanfordnlp/backpack-gpt2
+resultsfile: testbackpackresults/stanfordnlp-backpack-gpt2-company-sense-lr1.55E-02-epochs10-regtypeKL-regw1.61E-01-sensec9-sensereg1000.results.out.seed1.league0.0001.seed7
+save_info:
+  criteria: league
+  league: 0.0001
+  model_logdir: models/testbackpackresults/stanfordnlp-backpack-gpt2-company-sense-lr1.55E-02-epochs10-regtypeKL-regw1.61E-01-sensec9-sensereg1000.results.out.seed1.league0.0001.seed7
+seed: 1
+senses:
+  background_data_path: data/trainval-chunked.jsonl
+  max_senses_per_example: 9
+  max_senses_total: 0
+  regularization_lambda: 1000
+  sense_method: alpha
+success_rate: 0.16389548693586697
+task: company
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/company_ceo/split/company_ceo_train-test.jsonl
+  finetune_type: senses
+  grad_acc_steps: 5
+  learning_rate: 0.015506209452807515
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.1605972143033857
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/company_ceo/split/company_ceo_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/company_ceo/split/company_ceo_hard_neg_eval_clear-val.jsonl
+  intervention_eval_path: data/company_ceo/split/company_ceo_eval_clear-test.jsonl

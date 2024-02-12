@@ -1,0 +1,28 @@
+device: cuda
+logfile: backpackresults/stanfordnlp-backpack-gpt2-verb-lora-lr3.62E-04-epochs10-regtypeKL-regw1.39E-01-lorarank171-loratgt1to11.out.seed1
+model: stanfordnlp/backpack-gpt2
+resultsfile: backpackresults/stanfordnlp-backpack-gpt2-verb-lora-lr3.62E-04-epochs10-regtypeKL-regw1.39E-01-lorarank171-loratgt1to11.results.out.seed1
+seed: 1
+threshold: -2.772588722239781
+training:
+  batch_size: 1
+  dataset_path: data/verb_conjugation/split/verb_conjugation_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.0003623026215299023
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 171
+    target_modules: .*\.(1|2|3|4|5|6|7|8|9|10|11)\.mlp\.(c_proj|c_fc)
+  loss_type: good-v-bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.13948451641192522
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/verb_conjugation/split/verb_conjugation_eval_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/verb_conjugation/split/verb_conjugation_eval-val.jsonl

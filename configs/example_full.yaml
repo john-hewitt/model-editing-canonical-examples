@@ -1,0 +1,19 @@
+device: cuda
+threshold: 1.6094379124341003
+model: stanfordnlp/backpack-gpt2
+logfile: fullbp.0.000006.out-val.jsonl
+resultsfile: fullbp.0.000006.results-val.jsonl
+training:
+  dataset_path: data/country_capital/split/country_capital_fixed-val.jsonl
+  batch_size: 10
+  num_epochs: 20
+  learning_rate: .0000002
+  finetune_type: full
+  regularization_weight: 10
+  suffix_pair: False
+  loss_type: good
+validation:
+  eval_normalization: example
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-val.jsonl
+  degredation_general_path: data/val100-val.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-val.jsonl

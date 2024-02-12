@@ -1,0 +1,5 @@
+*.out
+results-scratch
+images
+results-canonical
+__pycache__

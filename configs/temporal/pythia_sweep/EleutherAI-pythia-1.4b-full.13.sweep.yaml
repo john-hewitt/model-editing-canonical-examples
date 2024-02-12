@@ -1,0 +1,23 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-1.4b-temporal-full-lr8.77E-07-epochs10-regtypeKL-regw7.08E-01.out.seed0
+model: EleutherAI/pythia-1.4b
+resultsfile: pythiaresults/EleutherAI-pythia-1.4b-temporal-full-lr8.77E-07-epochs10-regtypeKL-regw7.08E-01.results.out.seed0
+seed: 0
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 8.774578289955913e-07
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.7080265917812016
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-val.jsonl

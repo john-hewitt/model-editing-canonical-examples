@@ -1,0 +1,26 @@
+device: cuda
+logfile: llamaresults/meta-llama-Llama-2-7b-hf-company-full-lr1.71E-05-epochs10-regtypeKL-regw6.16E-01.out.seed1
+model: meta-llama/Llama-2-7b-hf
+resultsfile: llamaresults/meta-llama-Llama-2-7b-hf-company-full-lr1.71E-05-epochs10-regtypeKL-regw6.16E-01.results.out.seed1
+seed: 1
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/company_ceo/split/company_ceo_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 1.7135066883528004e-05
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.6160905256351
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/company_ceo/split/company_ceo_unconditional-val.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/company_ceo/split/company_ceo_hard_neg_eval_clear-val.jsonl
+  intervention_eval_path: data/company_ceo/split/company_ceo_eval_clear-val.jsonl

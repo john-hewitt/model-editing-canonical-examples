@@ -1,0 +1,22 @@
+device: cuda
+logfile: pythiaresults/stanfordnlp-backpack-gpt2-temporal-full-lr1.90E-06-epochs20-regtypeKL-regw1.23E+00.out
+model: stanfordnlp/backpack-gpt2
+resultsfile: pythiaresults/stanfordnlp-backpack-gpt2-temporal-full-lr1.90E-06-epochs20-regtypeKL-regw1.23E+00.results.out
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 10
+  learning_rate: 1.9026686595780743e-06
+  loss_type: good
+  num_epochs: 20
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 1.2271856468588112
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-val.jsonl

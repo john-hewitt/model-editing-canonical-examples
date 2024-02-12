@@ -1,0 +1,25 @@
+boltons @ file:///home/conda/feedstock_root/build_artifacts/boltons_1677499911949/work
+brotlipy==0.7.0
+certifi==2023.7.22
+cffi @ file:///croot/cffi_1670423208954/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+conda @ file:///home/conda/feedstock_root/build_artifacts/conda_1690552945528/work
+conda-content-trust @ file:///tmp/abs_5952f1c8-355c-4855-ad2e-538535021ba5h26t22e5/croots/recipe/conda-content-trust_1658126371814/work
+conda-package-handling @ file:///croot/conda-package-handling_1666940373510/work
+cryptography @ file:///croot/cryptography_1665612644927/work
+idna @ file:///croot/idna_1666125576474/work
+jsonpatch @ file:///home/conda/feedstock_root/build_artifacts/jsonpatch_1632759296524/work
+jsonpointer==2.0
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1681337016113/work
+pluggy @ file:///tmp/build/80754af9/pluggy_1648024445381/work
+pycosat @ file:///croot/pycosat_1666805502580/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
+PySocks @ file:///tmp/build/80754af9/pysocks_1605305812635/work
+requests @ file:///opt/conda/conda-bld/requests_1657734628632/work
+ruamel.yaml @ file:///croot/ruamel.yaml_1666304550667/work
+ruamel.yaml.clib @ file:///croot/ruamel.yaml.clib_1666302247304/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+toolz @ file:///croot/toolz_1667464077321/work
+tqdm @ file:///opt/conda/conda-bld/tqdm_1664392687731/work
+urllib3 @ file:///croot/urllib3_1670526988650/work

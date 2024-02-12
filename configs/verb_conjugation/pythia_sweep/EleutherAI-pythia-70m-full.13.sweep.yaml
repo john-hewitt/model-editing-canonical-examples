@@ -1,0 +1,23 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-70m-verb-full-lr9.10E-06-epochs10-regtypeKL-regw1.25E-01.out.seed1
+model: EleutherAI/pythia-70m
+resultsfile: pythiaresults/EleutherAI-pythia-70m-verb-full-lr9.10E-06-epochs10-regtypeKL-regw1.25E-01.results.out.seed1
+seed: 1
+threshold: -2.772588722239781
+training:
+  batch_size: 1
+  dataset_path: data/verb_conjugation/split/verb_conjugation_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 9.09782951171597e-06
+  loss_type: good-v-bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.12505788027456516
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/verb_conjugation/split/verb_conjugation_eval_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/verb_conjugation/split/verb_conjugation_eval-val.jsonl

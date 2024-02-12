@@ -1,0 +1,22 @@
+device: cuda
+logfile: pythiaresults/stanfordnlp-backpack-gpt2-verb-full-lr2.61E-05-epochs20-regtypeKL-regw2.84E+00.out
+model: stanfordnlp/backpack-gpt2
+resultsfile: pythiaresults/stanfordnlp-backpack-gpt2-verb-full-lr2.61E-05-epochs20-regtypeKL-regw2.84E+00.results.out
+threshold: 0.6931471805599453
+training:
+  batch_size: 1
+  dataset_path: data/verb_conjugation/split/verb_conjugation_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 10
+  learning_rate: 2.6097332759454165e-05
+  loss_type: good-v-bad
+  num_epochs: 20
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 2.841511473778101
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/verb_conjugation/split/verb_conjugation_eval_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/verb_conjugation/split/verb_conjugation_eval-val.jsonl

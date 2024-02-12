@@ -1,0 +1,26 @@
+model: stanfordnlp/backpack-gpt2
+logfile: senses.32.out-val.jsonl
+threshold: 1.6094379124341003
+resultsfile: senses.32.results-val.jsonl
+device: cuda
+training:
+  dataset_path: data/country_capital/split/country_capital_fixed-val.jsonl
+  batch_size: 10
+  num_epochs: 20
+  learning_rate: .002
+  finetune_type: senses
+  loss_type: good
+  suffix_pair: False
+  regularization_type: KL
+  regularization_weight: 0
+  regularization_data_path: data/val100-val.jsonl
+validation:
+  eval_normalization: example
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-val.jsonl
+  degredation_general_path: data/val100-val.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-val.jsonl
+senses:
+  max_senses_per_example: 32
+  max_senses_total: 0
+  regularization_lambda: 1000000000
+  background_data_path: data/val100-val.jsonl

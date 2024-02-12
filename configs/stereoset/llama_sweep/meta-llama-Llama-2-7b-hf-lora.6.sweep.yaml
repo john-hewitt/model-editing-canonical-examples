@@ -1,0 +1,31 @@
+device: cuda
+logfile: llamaresults/meta-llama-Llama-2-7b-hf-stereoset-lora-lr6.88E-03-epochs10-regtypeKL-regw4.34E-01-lorarank8-loratgt13to24.out.seed1
+model: meta-llama/Llama-2-7b-hf
+resultsfile: llamaresults/meta-llama-Llama-2-7b-hf-stereoset-lora-lr6.88E-03-epochs10-regtypeKL-regw4.34E-01-lorarank8-loratgt13to24.results.out.seed1
+seed: 1
+threshold: -6.907755278982137
+training:
+  batch_size: 1
+  dataset_path: data/stereoset/split/stereoset_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.006876647204087709
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 8
+    target_modules: .*\.(13|14|15|16|17|18|19|20|21|22|23|24)\.mlp\.(up_proj|down_proj)
+  loss_type: bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.433621039976214
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-val.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/stereoset/split/stereoset_hard_neg-val.jsonl
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-val.jsonl

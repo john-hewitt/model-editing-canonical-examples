@@ -1,0 +1,28 @@
+device: cuda
+logfile: backpackresults/stanfordnlp-backpack-gpt2-stereoset-lora-lr6.29E-03-epochs10-regtypeKL-regw1.84E-01-lorarank16-loratgt3to10.out.seed1
+model: stanfordnlp/backpack-gpt2
+resultsfile: backpackresults/stanfordnlp-backpack-gpt2-stereoset-lora-lr6.29E-03-epochs10-regtypeKL-regw1.84E-01-lorarank16-loratgt3to10.results.out.seed1
+seed: 1
+threshold: -6.907755278982137
+training:
+  batch_size: 1
+  dataset_path: data/stereoset/split/stereoset_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.006289784124318869
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 16
+    target_modules: .*\.(3|4|5|6|7|8|9|10)\.mlp\.(c_proj|c_fc)
+  loss_type: bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.18382394315145129
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-val.jsonl

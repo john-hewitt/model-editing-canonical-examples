@@ -1,0 +1,28 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-1b-verb-lora-lr3.65E-06-epochs10-regtypeKL-regw6.40E-01-lorarank44-loratgt3to13.out.seed1
+model: EleutherAI/pythia-1b
+resultsfile: pythiaresults/EleutherAI-pythia-1b-verb-lora-lr3.65E-06-epochs10-regtypeKL-regw6.40E-01-lorarank44-loratgt3to13.results.out.seed1
+seed: 1
+threshold: -2.772588722239781
+training:
+  batch_size: 1
+  dataset_path: data/verb_conjugation/split/verb_conjugation_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 3.646437290091417e-06
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 44
+    target_modules: .*\.(3|4|5|6|7|8|9|10|11|12|13)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good-v-bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.6402083241198808
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/verb_conjugation/split/verb_conjugation_eval_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/verb_conjugation/split/verb_conjugation_eval-val.jsonl

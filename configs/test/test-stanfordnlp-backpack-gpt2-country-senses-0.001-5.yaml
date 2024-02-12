@@ -1,0 +1,40 @@
+device: cuda
+league: '0.001'
+logfile: testbackpackresults/stanfordnlp-backpack-gpt2-country-sense-lr1.49E-02-epochs10-regtypeKL-regw4.21E-01-sensec8-sensereg1745.out.seed1.league0.001.seed5
+method: senses
+model: stanfordnlp/backpack-gpt2
+resultsfile: testbackpackresults/stanfordnlp-backpack-gpt2-country-sense-lr1.49E-02-epochs10-regtypeKL-regw4.21E-01-sensec8-sensereg1745.results.out.seed1.league0.001.seed5
+save_info:
+  criteria: league
+  league: 0.001
+  model_logdir: models/testbackpackresults/stanfordnlp-backpack-gpt2-country-sense-lr1.49E-02-epochs10-regtypeKL-regw4.21E-01-sensec8-sensereg1745.results.out.seed1.league0.001.seed5
+seed: 1
+senses:
+  background_data_path: data/trainval-chunked.jsonl
+  max_senses_per_example: 8
+  max_senses_total: 0
+  regularization_lambda: 1745
+  sense_method: alpha
+success_rate: 0.17525773195876293
+task: country
+threshold: 1.6094379124341003
+training:
+  batch_size: 1
+  dataset_path: data/country_capital/split/country_capital_fixed-test.jsonl
+  finetune_type: senses
+  grad_acc_steps: 5
+  learning_rate: 0.014889245672667722
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.4209541561147987
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/country_capital/split/country_capital_hard_neg-val.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-test.jsonl

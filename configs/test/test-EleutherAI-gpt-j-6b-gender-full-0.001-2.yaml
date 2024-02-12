@@ -1,0 +1,30 @@
+device: cuda
+league: '0.001'
+logfile: testgptjresults/EleutherAI-gpt-j-6b-gender-full-lr6.37E-06-epochs10-regtypeKL-regw2.20E-01.out.seed1.league0.001.seed2
+method: full
+model: EleutherAI/gpt-j-6b
+resultsfile: testgptjresults/EleutherAI-gpt-j-6b-gender-full-lr6.37E-06-epochs10-regtypeKL-regw2.20E-01.results.out.seed1.league0.001.seed2
+seed: 1
+success_rate: 0.37812500000000004
+task: gender
+threshold: 0.4054651081081646
+training:
+  batch_size: 1
+  dataset_path: data/pronoun_gender_bias/split/pronoun_gender_bias_train-test.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 6.369463084930531e-06
+  loss_type: balance
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.22011338014746748
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/pronoun_gender_bias/split/pronoun_gender_bias_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/pronoun_gender_bias/split/pronoun_gender_bias_hard_neg_eval-val.jsonl
+  intervention_eval_path: data/pronoun_gender_bias/split/pronoun_gender_bias_eval-test.jsonl

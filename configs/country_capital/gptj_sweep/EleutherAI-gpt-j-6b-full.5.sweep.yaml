@@ -1,0 +1,26 @@
+device: cuda
+logfile: gptjresults/EleutherAI-gpt-j-6b-country-full-lr2.23E-08-epochs10-regtypeKL-regw1.46E-01.out.seed1
+model: EleutherAI/gpt-j-6b
+resultsfile: gptjresults/EleutherAI-gpt-j-6b-country-full-lr2.23E-08-epochs10-regtypeKL-regw1.46E-01.results.out.seed1
+seed: 1
+threshold: 1.6094379124341003
+training:
+  batch_size: 1
+  dataset_path: data/country_capital/split/country_capital_fixed-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 2.2329715612309064e-08
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.14631958164008607
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-val.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/country_capital/split/country_capital_hard_neg-val.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-val.jsonl

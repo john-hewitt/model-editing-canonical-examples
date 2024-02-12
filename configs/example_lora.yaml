@@ -1,0 +1,19 @@
+device: cuda
+model: gpt2s-flash-fp16-last
+logfile: full.0.000006.out.jsonl
+training:
+  dataset_path: data/country_capital/split/country_capital/split/country_capital_fixed.jsonl
+  batch_size: 16
+  num_epochs: 50
+  learning_rate: .000001
+  finetune_type: full
+  lora:
+    target_modules: '.*\.(4|5|6|7|8|9|10)\.mlp\.(c_proj|c_fc)'
+    lora_alpha: 27
+    lora_rank: 256
+    lora_dropout: 0.1
+  loss_type: good
+validation:
+  degredation_targeted_path: data/country_capital/split/country_capital/split/country_capital_unconditional.jsonl
+  degredation_general_path: data/val100.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital/split/country_capital_clear_eval.jsonl

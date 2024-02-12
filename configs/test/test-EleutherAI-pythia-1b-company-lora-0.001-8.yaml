@@ -1,0 +1,35 @@
+device: cuda
+league: '0.001'
+logfile: testpythiaresults/EleutherAI-pythia-1b-company-lora-lr3.26E-04-epochs10-regtypeKL-regw2.64E-01-lorarank138-loratgt1to15.out.seed1.league0.001.seed8
+method: lora
+model: EleutherAI/pythia-1b
+resultsfile: testpythiaresults/EleutherAI-pythia-1b-company-lora-lr3.26E-04-epochs10-regtypeKL-regw2.64E-01-lorarank138-loratgt1to15.results.out.seed1.league0.001.seed8
+seed: 1
+success_rate: 0.16864608076009502
+task: company
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/company_ceo/split/company_ceo_train-test.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.0003260231327084897
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 138
+    target_modules: .*\.(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.2643026959335514
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/company_ceo/split/company_ceo_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/company_ceo/split/company_ceo_hard_neg_eval_clear-val.jsonl
+  intervention_eval_path: data/company_ceo/split/company_ceo_eval_clear-test.jsonl

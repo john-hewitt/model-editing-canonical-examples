@@ -1,0 +1,35 @@
+device: cuda
+league: 1e-05
+logfile: testpythiaresults/EleutherAI-pythia-410m-temporal-lora-lr2.82E-04-epochs10-regtypeKL-regw6.34E-01-lorarank230-loratgt9to16.out.seed0.league1e-05.seed0
+method: lora
+model: EleutherAI/pythia-410m
+resultsfile: testpythiaresults/EleutherAI-pythia-410m-temporal-lora-lr2.82E-04-epochs10-regtypeKL-regw6.34E-01-lorarank230-loratgt9to16.results.out.seed0.league1e-05.seed0
+seed: 0
+success_rate: 0.26106194690265483
+task: temporal
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-test.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.0002823900559975783
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 230
+    target_modules: .*\.(9|10|11|12|13|14|15|16)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.6335130425545386
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/temporal/split/temporal_hard_neg_eval_clear-val.jsonl
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-test.jsonl

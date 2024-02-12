@@ -1,0 +1,28 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-1b-temporal-lora-lr1.39E-06-epochs10-regtypeKL-regw1.04E-01-lorarank71-loratgt6to10.out.seed0
+model: EleutherAI/pythia-1b
+resultsfile: pythiaresults/EleutherAI-pythia-1b-temporal-lora-lr1.39E-06-epochs10-regtypeKL-regw1.04E-01-lorarank71-loratgt6to10.results.out.seed0
+seed: 0
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 1.3883176918486845e-06
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 71
+    target_modules: .*\.(6|7|8|9|10)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.10375095454002028
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-val.jsonl

@@ -1,0 +1,17 @@
+device: cuda
+model: stanfordnlp/backpack-gpt2
+logfile: fullbp.0.000006.out-val.jsonl
+resultsfile: fullbp.0.000006.results-val.jsonl
+training:
+  dataset_path: data/stereoset/split/stereoset_train-val.jsonl
+  batch_size: 16
+  num_epochs: 20
+  learning_rate: .000002
+  finetune_type: full
+  suffix_pair: False
+  loss_type: bad
+validation:
+  eval_normalization: example
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-val.jsonl
+  degredation_general_path: data/val-chunked.jsonl
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-val.jsonl

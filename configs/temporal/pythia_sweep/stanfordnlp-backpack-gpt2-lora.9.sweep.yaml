@@ -1,0 +1,27 @@
+device: cuda
+logfile: pythiaresults/stanfordnlp-backpack-gpt2-temporal-lora-lr6.24E-04-epochs20-regtypeKL-regw2.06E-01-lorarank75-loratgt2to10.out
+model: stanfordnlp/backpack-gpt2
+resultsfile: pythiaresults/stanfordnlp-backpack-gpt2-temporal-lora-lr6.24E-04-epochs20-regtypeKL-regw2.06E-01-lorarank75-loratgt2to10.results.out
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 10
+  learning_rate: 0.000623996797505057
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 75
+    target_modules: .*\.(2|3|4|5|6|7|8|9|10)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good
+  num_epochs: 20
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.20615582532306745
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-val.jsonl
+  eval_normalization: token
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-val.jsonl

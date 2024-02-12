@@ -1,0 +1,30 @@
+device: cuda
+league: '0.001'
+logfile: testllamaresults/meta-llama-Llama-2-7b-hf-temporal-full-lr4.89E-07-epochs10-regtypeKL-regw2.66E-01.out.seed0.league0.001.seed9
+method: full
+model: meta-llama/Llama-2-7b-hf
+resultsfile: testllamaresults/meta-llama-Llama-2-7b-hf-temporal-full-lr4.89E-07-epochs10-regtypeKL-regw2.66E-01.results.out.seed0.league0.001.seed9
+seed: 0
+success_rate: 0.6836283185840708
+task: temporal
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-test.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 4.886275469810594e-07
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.2663479041599299
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/temporal/split/temporal_hard_neg_eval_clear-val.jsonl
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-test.jsonl

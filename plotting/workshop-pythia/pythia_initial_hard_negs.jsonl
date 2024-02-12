@@ -1,0 +1,294 @@
+{"method": "initial", "model": "EleutherAI/pythia-2.8b", "task": "stereoset", "score": -41.101353651664425}
+{"method": "initial", "model": "EleutherAI/pythia-2.8b", "task": "country", "score": -3.838113262735564}
+{"method": "initial", "model": "EleutherAI/pythia-2.8b", "task": "company", "score": -10.928515521358682}
+{"method": "initial", "model": "EleutherAI/pythia-2.8b", "task": "gender", "score": -0.7490525265957446}
+{"method": "initial", "model": "EleutherAI/pythia-2.8b", "task": "verb", "score": -47.12118078867594}
+{"method": "initial", "model": "EleutherAI/pythia-2.8b", "task": "temporal", "score": -4.14422947827219}
+{"method": "initial", "model": "EleutherAI/pythia-1.4b", "task": "stereoset", "score": -43.42668471014851}
+{"method": "initial", "model": "EleutherAI/pythia-1.4b", "task": "country", "score": -4.99367463177648}
+{"method": "initial", "model": "EleutherAI/pythia-1.4b", "task": "company", "score": -13.164228247725257}
+{"method": "initial", "model": "EleutherAI/pythia-1.4b", "task": "gender", "score": -0.9121841755319149}
+{"method": "initial", "model": "EleutherAI/pythia-1.4b", "task": "verb", "score": -48.293537412749394}
+{"method": "initial", "model": "EleutherAI/pythia-1.4b", "task": "temporal", "score": -4.861161337413641}
+{"method": "initial", "model": "EleutherAI/pythia-70m", "task": "stereoset", "score": -83.93750468052124}
+{"method": "initial", "model": "EleutherAI/pythia-70m", "task": "country", "score": -19.499762173356682}
+{"method": "initial", "model": "EleutherAI/pythia-70m", "task": "company", "score": -33.84071217715468}
+{"method": "initial", "model": "EleutherAI/pythia-70m", "task": "gender", "score": -2.867287234042553}
+{"method": "initial", "model": "EleutherAI/pythia-70m", "task": "verb", "score": -92.04598808288574}
+{"method": "initial", "model": "EleutherAI/pythia-70m", "task": "temporal", "score": -16.218854928690853}
+{"method": "initial", "model": "EleutherAI/pythia-1b", "task": "stereoset", "score": -44.62594558483968}
+{"method": "initial", "model": "EleutherAI/pythia-1b", "task": "country", "score": -5.99674809390101}
+{"method": "initial", "model": "EleutherAI/pythia-1b", "task": "company", "score": -14.052161613011469}
+{"method": "initial", "model": "EleutherAI/pythia-1b", "task": "gender", "score": -0.9084275265957447}
+{"method": "initial", "model": "EleutherAI/pythia-1b", "task": "verb", "score": -48.97265397177802}
+{"method": "initial", "model": "EleutherAI/pythia-1b", "task": "temporal", "score": -5.386567900297268}
+{"method": "initial", "model": "EleutherAI/pythia-160m", "task": "stereoset", "score": -61.30912526448568}
+{"method": "initial", "model": "EleutherAI/pythia-160m", "task": "country", "score": -13.972529444201239}
+{"method": "initial", "model": "EleutherAI/pythia-160m", "task": "company", "score": -25.04391688516695}
+{"method": "initial", "model": "EleutherAI/pythia-160m", "task": "gender", "score": -2.188422539893617}
+{"method": "initial", "model": "EleutherAI/pythia-160m", "task": "verb", "score": -67.24053140746223}
+{"method": "initial", "model": "EleutherAI/pythia-160m", "task": "temporal", "score": -11.122774648788962}
+{"method": "initial", "model": "EleutherAI/pythia-6.9b", "task": "stereoset", "score": -38.146943055213576}
+{"method": "initial", "model": "EleutherAI/pythia-6.9b", "task": "country", "score": -3.2013438302895114}
+{"method": "initial", "model": "EleutherAI/pythia-6.9b", "task": "company", "score": -10.52352694507059}
+{"method": "initial", "model": "EleutherAI/pythia-6.9b", "task": "gender", "score": -0.7387632978723404}
+{"method": "initial", "model": "EleutherAI/pythia-6.9b", "task": "verb", "score": -46.77136099603441}
+{"method": "initial", "model": "EleutherAI/pythia-6.9b", "task": "temporal", "score": -3.705888139558022}
+{"method": "initial", "model": "EleutherAI/pythia-410m", "task": "stereoset", "score": -48.57432601073755}
+{"method": "initial", "model": "EleutherAI/pythia-410m", "task": "country", "score": -7.918265178285797}
+{"method": "initial", "model": "EleutherAI/pythia-410m", "task": "company", "score": -17.860074709539543}
+{"method": "initial", "model": "EleutherAI/pythia-410m", "task": "gender", "score": -1.2878823138297872}
+{"method": "initial", "model": "EleutherAI/pythia-410m", "task": "verb", "score": -52.136075014538235}
+{"method": "initial", "model": "EleutherAI/pythia-410m", "task": "temporal", "score": -6.944584790109669}
+{"model": "EleutherAI/pythia-2.8b", "task": "stereoset", "league": "0.001", "method": "full", "score": -42.86188619142093}
+{"model": "EleutherAI/pythia-2.8b", "task": "stereoset", "league": "0.001", "method": "lora", "score": -41.64294038478541}
+{"model": "EleutherAI/pythia-2.8b", "task": "stereoset", "league": "0.0001", "method": "full", "score": -40.955941474675456}
+{"model": "EleutherAI/pythia-2.8b", "task": "stereoset", "league": "0.0001", "method": "lora", "score": -41.1102337349665}
+{"model": "EleutherAI/pythia-2.8b", "task": "stereoset", "league": "1e-05", "method": "full", "score": -40.955941474675456}
+{"model": "EleutherAI/pythia-2.8b", "task": "stereoset", "league": "1e-05", "method": "lora", "score": -41.101353651664425}
+{"model": "EleutherAI/pythia-2.8b", "task": "country", "league": "0.001", "method": "full", "score": -3.7488309316251476}
+{"model": "EleutherAI/pythia-2.8b", "task": "country", "league": "0.001", "method": "lora", "score": -3.633560872626031}
+{"model": "EleutherAI/pythia-2.8b", "task": "country", "league": "0.0001", "method": "full", "score": -3.792175238844993}
+{"model": "EleutherAI/pythia-2.8b", "task": "country", "league": "0.0001", "method": "lora", "score": -3.6288306685699814}
+{"model": "EleutherAI/pythia-2.8b", "task": "country", "league": "1e-05", "method": "full", "score": -3.8699406693721636}
+{"model": "EleutherAI/pythia-2.8b", "task": "country", "league": "1e-05", "method": "lora", "score": -3.6016467316397316}
+{"model": "EleutherAI/pythia-2.8b", "task": "company", "league": "0.001", "method": "full", "score": -10.75948758030954}
+{"model": "EleutherAI/pythia-2.8b", "task": "company", "league": "0.001", "method": "lora", "score": -10.708281154139039}
+{"model": "EleutherAI/pythia-2.8b", "task": "company", "league": "0.0001", "method": "full", "score": -10.837380270616832}
+{"model": "EleutherAI/pythia-2.8b", "task": "company", "league": "0.0001", "method": "lora", "score": -10.615478617234137}
+{"model": "EleutherAI/pythia-2.8b", "task": "company", "league": "1e-05", "method": "full", "score": -10.85853825021915}
+{"model": "EleutherAI/pythia-2.8b", "task": "company", "league": "1e-05", "method": "lora", "score": -10.535346158926165}
+{"model": "EleutherAI/pythia-2.8b", "task": "gender", "league": "0.001", "method": "full", "score": -0.756252770390071}
+{"model": "EleutherAI/pythia-2.8b", "task": "gender", "league": "0.001", "method": "lora", "score": -0.7782358156028366}
+{"model": "EleutherAI/pythia-2.8b", "task": "gender", "league": "0.0001", "method": "full", "score": -0.7432291666666666}
+{"model": "EleutherAI/pythia-2.8b", "task": "gender", "league": "0.0001", "method": "lora", "score": -0.7828485150709221}
+{"model": "EleutherAI/pythia-2.8b", "task": "gender", "league": "1e-05", "method": "full", "score": -0.744498005319149}
+{"model": "EleutherAI/pythia-2.8b", "task": "gender", "league": "1e-05", "method": "lora", "score": -0.7667857934397162}
+{"model": "EleutherAI/pythia-2.8b", "task": "verb", "league": "0.001", "method": "full", "score": -47.12998882487968}
+{"model": "EleutherAI/pythia-2.8b", "task": "verb", "league": "0.001", "method": "lora", "score": -47.015673246207065}
+{"model": "EleutherAI/pythia-2.8b", "task": "verb", "league": "0.0001", "method": "full", "score": -47.115427605311076}
+{"model": "EleutherAI/pythia-2.8b", "task": "verb", "league": "0.0001", "method": "lora", "score": -47.010439587522434}
+{"model": "EleutherAI/pythia-2.8b", "task": "verb", "league": "1e-05", "method": "full", "score": -47.11255101362864}
+{"model": "EleutherAI/pythia-2.8b", "task": "verb", "league": "1e-05", "method": "lora", "score": -47.05053531593746}
+{"model": "EleutherAI/pythia-2.8b", "task": "temporal", "league": "0.001", "method": "full", "score": -4.146148420136099}
+{"model": "EleutherAI/pythia-2.8b", "task": "temporal", "league": "0.001", "method": "lora", "score": -4.166233374915168}
+{"model": "EleutherAI/pythia-2.8b", "task": "temporal", "league": "0.0001", "method": "full", "score": -4.152864312349268}
+{"model": "EleutherAI/pythia-2.8b", "task": "temporal", "league": "0.0001", "method": "lora", "score": -4.166484706812469}
+{"model": "EleutherAI/pythia-2.8b", "task": "temporal", "league": "1e-05", "method": "full", "score": -4.1442592121539406}
+{"model": "EleutherAI/pythia-2.8b", "task": "temporal", "league": "1e-05", "method": "lora", "score": -4.153930110101936}
+{"model": "EleutherAI/pythia-1.4b", "task": "stereoset", "league": "0.001", "method": "full", "score": -44.909322739251245}
+{"model": "EleutherAI/pythia-1.4b", "task": "stereoset", "league": "0.001", "method": "lora", "score": -53.05062194080359}
+{"model": "EleutherAI/pythia-1.4b", "task": "stereoset", "league": "0.0001", "method": "full", "score": -44.439910956295506}
+{"model": "EleutherAI/pythia-1.4b", "task": "stereoset", "league": "0.0001", "method": "lora", "score": -62.08182621756925}
+{"model": "EleutherAI/pythia-1.4b", "task": "stereoset", "league": "1e-05", "method": "full", "score": -45.19070763993995}
+{"model": "EleutherAI/pythia-1.4b", "task": "stereoset", "league": "1e-05", "method": "lora", "score": -51.13123930025116}
+{"model": "EleutherAI/pythia-1.4b", "task": "country", "league": "0.001", "method": "full", "score": -4.812500213754588}
+{"model": "EleutherAI/pythia-1.4b", "task": "country", "league": "0.001", "method": "lora", "score": -4.884509251035493}
+{"model": "EleutherAI/pythia-1.4b", "task": "country", "league": "0.0001", "method": "full", "score": -4.817135634093449}
+{"model": "EleutherAI/pythia-1.4b", "task": "country", "league": "0.0001", "method": "lora", "score": -4.891299044948885}
+{"model": "EleutherAI/pythia-1.4b", "task": "country", "league": "1e-05", "method": "full", "score": -4.750734848537665}
+{"model": "EleutherAI/pythia-1.4b", "task": "country", "league": "1e-05", "method": "lora", "score": -4.8266163721851925}
+{"model": "EleutherAI/pythia-1.4b", "task": "company", "league": "0.001", "method": "full", "score": -12.948248690484684}
+{"model": "EleutherAI/pythia-1.4b", "task": "company", "league": "0.001", "method": "lora", "score": -12.802694628409236}
+{"model": "EleutherAI/pythia-1.4b", "task": "company", "league": "0.0001", "method": "full", "score": -13.03517656892402}
+{"model": "EleutherAI/pythia-1.4b", "task": "company", "league": "0.0001", "method": "lora", "score": -12.812520696329381}
+{"model": "EleutherAI/pythia-1.4b", "task": "company", "league": "1e-05", "method": "full", "score": -13.131020084363684}
+{"model": "EleutherAI/pythia-1.4b", "task": "company", "league": "1e-05", "method": "lora", "score": -12.799020939947445}
+{"model": "EleutherAI/pythia-1.4b", "task": "gender", "league": "0.001", "method": "full", "score": -0.9385333554964539}
+{"model": "EleutherAI/pythia-1.4b", "task": "gender", "league": "0.001", "method": "lora", "score": -0.9555324689716311}
+{"model": "EleutherAI/pythia-1.4b", "task": "gender", "league": "0.0001", "method": "full", "score": -0.9358156028368796}
+{"model": "EleutherAI/pythia-1.4b", "task": "gender", "league": "0.0001", "method": "lora", "score": -0.978623670212766}
+{"model": "EleutherAI/pythia-1.4b", "task": "gender", "league": "1e-05", "method": "full", "score": -0.923864140070922}
+{"model": "EleutherAI/pythia-1.4b", "task": "gender", "league": "1e-05", "method": "lora", "score": -0.9213264627659576}
+{"model": "EleutherAI/pythia-1.4b", "task": "verb", "league": "0.001", "method": "full", "score": -48.3171588226601}
+{"model": "EleutherAI/pythia-1.4b", "task": "verb", "league": "0.001", "method": "lora", "score": -48.9514590104421}
+{"model": "EleutherAI/pythia-1.4b", "task": "verb", "league": "0.0001", "method": "full", "score": -48.26871628231472}
+{"model": "EleutherAI/pythia-1.4b", "task": "verb", "league": "0.0001", "method": "lora", "score": -48.14745242595672}
+{"model": "EleutherAI/pythia-1.4b", "task": "verb", "league": "1e-05", "method": "full", "score": -48.2693564441469}
+{"model": "EleutherAI/pythia-1.4b", "task": "verb", "league": "1e-05", "method": "lora", "score": -48.33445266529366}
+{"model": "EleutherAI/pythia-1.4b", "task": "temporal", "league": "0.001", "method": "full", "score": -4.8731047966179935}
+{"model": "EleutherAI/pythia-1.4b", "task": "temporal", "league": "0.001", "method": "lora", "score": -4.8819240620734865}
+{"model": "EleutherAI/pythia-1.4b", "task": "temporal", "league": "0.0001", "method": "full", "score": -4.8731047966179935}
+{"model": "EleutherAI/pythia-1.4b", "task": "temporal", "league": "0.0001", "method": "lora", "score": -4.887833762189314}
+{"model": "EleutherAI/pythia-1.4b", "task": "temporal", "league": "1e-05", "method": "full", "score": -4.8731047966179935}
+{"model": "EleutherAI/pythia-1.4b", "task": "temporal", "league": "1e-05", "method": "lora", "score": -4.894859807554636}
+{"model": "EleutherAI/pythia-70m", "task": "stereoset", "league": "0.001", "method": "full", "score": -83.75650299738841}
+{"model": "EleutherAI/pythia-70m", "task": "stereoset", "league": "0.001", "method": "lora", "score": -83.80047041315487}
+{"model": "EleutherAI/pythia-70m", "task": "stereoset", "league": "0.0001", "method": "full", "score": -83.75650299738841}
+{"model": "EleutherAI/pythia-70m", "task": "stereoset", "league": "0.0001", "method": "lora", "score": -83.89798033045001}
+{"model": "EleutherAI/pythia-70m", "task": "stereoset", "league": "1e-05", "method": "full", "score": -83.75650299738841}
+{"model": "EleutherAI/pythia-70m", "task": "stereoset", "league": "1e-05", "method": "lora", "score": -83.81893163030756}
+{"model": "EleutherAI/pythia-70m", "task": "country", "league": "0.001", "method": "full", "score": -19.469271429653826}
+{"model": "EleutherAI/pythia-70m", "task": "country", "league": "0.001", "method": "lora", "score": -19.62541521006617}
+{"model": "EleutherAI/pythia-70m", "task": "country", "league": "0.0001", "method": "full", "score": -19.468373441148078}
+{"model": "EleutherAI/pythia-70m", "task": "country", "league": "0.0001", "method": "lora", "score": -19.499762173356682}
+{"model": "EleutherAI/pythia-70m", "task": "country", "league": "1e-05", "method": "full", "score": -19.469271429653826}
+{"model": "EleutherAI/pythia-70m", "task": "country", "league": "1e-05", "method": "lora", "score": -19.62541521006617}
+{"model": "EleutherAI/pythia-70m", "task": "company", "league": "0.001", "method": "full", "score": -33.691948970521786}
+{"model": "EleutherAI/pythia-70m", "task": "company", "league": "0.001", "method": "lora", "score": -33.214172641980596}
+{"model": "EleutherAI/pythia-70m", "task": "company", "league": "0.0001", "method": "full", "score": -33.691948970521786}
+{"model": "EleutherAI/pythia-70m", "task": "company", "league": "0.0001", "method": "lora", "score": -33.248620252449584}
+{"model": "EleutherAI/pythia-70m", "task": "company", "league": "1e-05", "method": "full", "score": -33.84071217715468}
+{"model": "EleutherAI/pythia-70m", "task": "company", "league": "1e-05", "method": "lora", "score": -33.214172641980596}
+{"model": "EleutherAI/pythia-70m", "task": "gender", "league": "0.001", "method": "full", "score": -2.88843085106383}
+{"model": "EleutherAI/pythia-70m", "task": "gender", "league": "0.001", "method": "lora", "score": -2.958809840425532}
+{"model": "EleutherAI/pythia-70m", "task": "gender", "league": "0.0001", "method": "full", "score": -2.8967752659574466}
+{"model": "EleutherAI/pythia-70m", "task": "gender", "league": "0.0001", "method": "lora", "score": -2.9048204787234044}
+{"model": "EleutherAI/pythia-70m", "task": "gender", "league": "1e-05", "method": "full", "score": -2.8962987588652482}
+{"model": "EleutherAI/pythia-70m", "task": "gender", "league": "1e-05", "method": "lora", "score": -2.9237699468085103}
+{"model": "EleutherAI/pythia-70m", "task": "verb", "league": "0.001", "method": "full", "score": -92.34658565874453}
+{"model": "EleutherAI/pythia-70m", "task": "verb", "league": "0.001", "method": "lora", "score": -92.02208863717539}
+{"model": "EleutherAI/pythia-70m", "task": "verb", "league": "0.0001", "method": "full", "score": -92.1994314123083}
+{"model": "EleutherAI/pythia-70m", "task": "verb", "league": "0.0001", "method": "lora", "score": -92.0101389143202}
+{"model": "EleutherAI/pythia-70m", "task": "verb", "league": "1e-05", "method": "full", "score": -92.19969126383462}
+{"model": "EleutherAI/pythia-70m", "task": "verb", "league": "1e-05", "method": "lora", "score": -92.0101389143202}
+{"model": "EleutherAI/pythia-70m", "task": "temporal", "league": "0.001", "method": "full", "score": -16.2365896818264}
+{"model": "EleutherAI/pythia-70m", "task": "temporal", "league": "0.001", "method": "lora", "score": -16.181040390393832}
+{"model": "EleutherAI/pythia-70m", "task": "temporal", "league": "0.0001", "method": "full", "score": -16.144543723765867}
+{"model": "EleutherAI/pythia-70m", "task": "temporal", "league": "0.0001", "method": "lora", "score": -16.22998634606421}
+{"model": "EleutherAI/pythia-70m", "task": "temporal", "league": "1e-05", "method": "full", "score": -16.2365896818264}
+{"model": "EleutherAI/pythia-70m", "task": "temporal", "league": "1e-05", "method": "lora", "score": -16.190654581391925}
+{"model": "EleutherAI/pythia-1b", "task": "stereoset", "league": "0.001", "method": "full", "score": -45.985312185622575}
+{"model": "EleutherAI/pythia-1b", "task": "stereoset", "league": "0.001", "method": "lora", "score": -46.67575896257991}
+{"model": "EleutherAI/pythia-1b", "task": "stereoset", "league": "0.0001", "method": "full", "score": -44.70907359471914}
+{"model": "EleutherAI/pythia-1b", "task": "stereoset", "league": "0.0001", "method": "lora", "score": -44.80018318480575}
+{"model": "EleutherAI/pythia-1b", "task": "stereoset", "league": "1e-05", "method": "full", "score": -44.63136940509619}
+{"model": "EleutherAI/pythia-1b", "task": "stereoset", "league": "1e-05", "method": "lora", "score": -44.637278662787544}
+{"model": "EleutherAI/pythia-1b", "task": "country", "league": "0.001", "method": "full", "score": -5.884249968775388}
+{"model": "EleutherAI/pythia-1b", "task": "country", "league": "0.001", "method": "lora", "score": -6.195451147939967}
+{"model": "EleutherAI/pythia-1b", "task": "country", "league": "0.0001", "method": "full", "score": -5.994794519468286}
+{"model": "EleutherAI/pythia-1b", "task": "country", "league": "0.0001", "method": "lora", "score": -5.880985468283466}
+{"model": "EleutherAI/pythia-1b", "task": "country", "league": "1e-05", "method": "full", "score": -5.982429369427692}
+{"model": "EleutherAI/pythia-1b", "task": "country", "league": "1e-05", "method": "lora", "score": -5.94301025552311}
+{"model": "EleutherAI/pythia-1b", "task": "company", "league": "0.001", "method": "full", "score": -13.954775434287896}
+{"model": "EleutherAI/pythia-1b", "task": "company", "league": "0.001", "method": "lora", "score": -13.660094506482919}
+{"model": "EleutherAI/pythia-1b", "task": "company", "league": "0.0001", "method": "full", "score": -13.988502757915805}
+{"model": "EleutherAI/pythia-1b", "task": "company", "league": "0.0001", "method": "lora", "score": -13.812552290964343}
+{"model": "EleutherAI/pythia-1b", "task": "company", "league": "1e-05", "method": "full", "score": -14.052226758983037}
+{"model": "EleutherAI/pythia-1b", "task": "company", "league": "1e-05", "method": "lora", "score": -14.055031345315177}
+{"model": "EleutherAI/pythia-1b", "task": "gender", "league": "0.001", "method": "full", "score": -0.9510416666666666}
+{"model": "EleutherAI/pythia-1b", "task": "gender", "league": "0.001", "method": "lora", "score": -0.9253740026595745}
+{"model": "EleutherAI/pythia-1b", "task": "gender", "league": "0.0001", "method": "full", "score": -0.9127659574468083}
+{"model": "EleutherAI/pythia-1b", "task": "gender", "league": "0.0001", "method": "lora", "score": -0.9346077127659573}
+{"model": "EleutherAI/pythia-1b", "task": "gender", "league": "1e-05", "method": "full", "score": -0.9125221631205676}
+{"model": "EleutherAI/pythia-1b", "task": "gender", "league": "1e-05", "method": "lora", "score": -0.9129848182624114}
+{"model": "EleutherAI/pythia-1b", "task": "verb", "league": "0.001", "method": "full", "score": -48.787532199753656}
+{"model": "EleutherAI/pythia-1b", "task": "verb", "league": "0.001", "method": "lora", "score": -49.022837527592976}
+{"model": "EleutherAI/pythia-1b", "task": "verb", "league": "0.0001", "method": "full", "score": -48.90716509024302}
+{"model": "EleutherAI/pythia-1b", "task": "verb", "league": "0.0001", "method": "lora", "score": -48.996852623091804}
+{"model": "EleutherAI/pythia-1b", "task": "verb", "league": "1e-05", "method": "full", "score": -48.96949485849451}
+{"model": "EleutherAI/pythia-1b", "task": "verb", "league": "1e-05", "method": "lora", "score": -49.00602058304681}
+{"model": "EleutherAI/pythia-1b", "task": "temporal", "league": "0.001", "method": "full", "score": -5.385969874995737}
+{"model": "EleutherAI/pythia-1b", "task": "temporal", "league": "0.001", "method": "lora", "score": -5.369377212843123}
+{"model": "EleutherAI/pythia-1b", "task": "temporal", "league": "0.0001", "method": "full", "score": -5.386567900297268}
+{"model": "EleutherAI/pythia-1b", "task": "temporal", "league": "0.0001", "method": "lora", "score": -5.3648993668642015}
+{"model": "EleutherAI/pythia-1b", "task": "temporal", "league": "1e-05", "method": "full", "score": -5.384262566292705}
+{"model": "EleutherAI/pythia-1b", "task": "temporal", "league": "1e-05", "method": "lora", "score": -5.385742373821974}
+{"model": "EleutherAI/pythia-160m", "task": "stereoset", "league": "0.001", "method": "full", "score": -61.268092576594775}
+{"model": "EleutherAI/pythia-160m", "task": "stereoset", "league": "0.001", "method": "lora", "score": -69.03109059902867}
+{"model": "EleutherAI/pythia-160m", "task": "stereoset", "league": "0.0001", "method": "full", "score": -61.30912526448568}
+{"model": "EleutherAI/pythia-160m", "task": "stereoset", "league": "0.0001", "method": "lora", "score": -67.79032184036896}
+{"model": "EleutherAI/pythia-160m", "task": "stereoset", "league": "1e-05", "method": "full", "score": -61.30912526448568}
+{"model": "EleutherAI/pythia-160m", "task": "stereoset", "league": "1e-05", "method": "lora", "score": -69.29947927293237}
+{"model": "EleutherAI/pythia-160m", "task": "country", "league": "0.001", "method": "full", "score": -13.856902462312545}
+{"model": "EleutherAI/pythia-160m", "task": "country", "league": "0.001", "method": "lora", "score": -14.171507736732218}
+{"model": "EleutherAI/pythia-160m", "task": "country", "league": "0.0001", "method": "full", "score": -13.857151689200565}
+{"model": "EleutherAI/pythia-160m", "task": "country", "league": "0.0001", "method": "lora", "score": -13.810745940811332}
+{"model": "EleutherAI/pythia-160m", "task": "country", "league": "1e-05", "method": "full", "score": -13.857151689200565}
+{"model": "EleutherAI/pythia-160m", "task": "country", "league": "1e-05", "method": "lora", "score": -13.972529444201237}
+{"model": "EleutherAI/pythia-160m", "task": "company", "league": "0.001", "method": "full", "score": -25.168989114746836}
+{"model": "EleutherAI/pythia-160m", "task": "company", "league": "0.001", "method": "lora", "score": -25.04391688516695}
+{"model": "EleutherAI/pythia-160m", "task": "company", "league": "0.0001", "method": "full", "score": -25.3490731574629}
+{"model": "EleutherAI/pythia-160m", "task": "company", "league": "0.0001", "method": "lora", "score": -25.28294922989797}
+{"model": "EleutherAI/pythia-160m", "task": "company", "league": "1e-05", "method": "full", "score": -25.3490731574629}
+{"model": "EleutherAI/pythia-160m", "task": "company", "league": "1e-05", "method": "lora", "score": -25.15352877960902}
+{"model": "EleutherAI/pythia-160m", "task": "gender", "league": "0.001", "method": "full", "score": -2.2241716533687943}
+{"model": "EleutherAI/pythia-160m", "task": "gender", "league": "0.001", "method": "lora", "score": -2.145570146276596}
+{"model": "EleutherAI/pythia-160m", "task": "gender", "league": "0.0001", "method": "full", "score": -2.2241716533687943}
+{"model": "EleutherAI/pythia-160m", "task": "gender", "league": "0.0001", "method": "lora", "score": -2.145570146276596}
+{"model": "EleutherAI/pythia-160m", "task": "gender", "league": "1e-05", "method": "full", "score": -2.188422539893617}
+{"model": "EleutherAI/pythia-160m", "task": "gender", "league": "1e-05", "method": "lora", "score": -2.200099734042553}
+{"model": "EleutherAI/pythia-160m", "task": "verb", "league": "0.001", "method": "full", "score": -67.085172368862}
+{"model": "EleutherAI/pythia-160m", "task": "verb", "league": "0.001", "method": "lora", "score": -67.39727948153461}
+{"model": "EleutherAI/pythia-160m", "task": "verb", "league": "0.0001", "method": "full", "score": -67.085172368862}
+{"model": "EleutherAI/pythia-160m", "task": "verb", "league": "0.0001", "method": "lora", "score": -67.1578031486935}
+{"model": "EleutherAI/pythia-160m", "task": "verb", "league": "1e-05", "method": "full", "score": -67.0074928495619}
+{"model": "EleutherAI/pythia-160m", "task": "verb", "league": "1e-05", "method": "lora", "score": -67.1578031486935}
+{"model": "EleutherAI/pythia-160m", "task": "temporal", "league": "0.001", "method": "full", "score": -11.2141913485098}
+{"model": "EleutherAI/pythia-160m", "task": "temporal", "league": "0.001", "method": "lora", "score": -11.08806118560634}
+{"model": "EleutherAI/pythia-160m", "task": "temporal", "league": "0.0001", "method": "full", "score": -11.072536746354418}
+{"model": "EleutherAI/pythia-160m", "task": "temporal", "league": "0.0001", "method": "lora", "score": -11.056382232378361}
+{"model": "EleutherAI/pythia-160m", "task": "temporal", "league": "1e-05", "method": "full", "score": -11.105720274859038}
+{"model": "EleutherAI/pythia-160m", "task": "temporal", "league": "1e-05", "method": "lora", "score": -11.130635584330292}
+{"model": "EleutherAI/pythia-6.9b", "task": "stereoset", "league": "0.001", "method": "full", "score": -38.285070553955}
+{"model": "EleutherAI/pythia-6.9b", "task": "stereoset", "league": "0.001", "method": "lora", "score": -39.99270836255641}
+{"model": "EleutherAI/pythia-6.9b", "task": "stereoset", "league": "0.0001", "method": "full", "score": -38.146943055213576}
+{"model": "EleutherAI/pythia-6.9b", "task": "stereoset", "league": "0.0001", "method": "lora", "score": -38.02512768259076}
+{"model": "EleutherAI/pythia-6.9b", "task": "stereoset", "league": "1e-05", "method": "full", "score": -38.146943055213576}
+{"model": "EleutherAI/pythia-6.9b", "task": "stereoset", "league": "1e-05", "method": "lora", "score": -38.00598507283722}
+{"model": "EleutherAI/pythia-6.9b", "task": "country", "league": "0.001", "method": "full", "score": -3.1883091063335014}
+{"model": "EleutherAI/pythia-6.9b", "task": "country", "league": "0.001", "method": "lora", "score": -3.0717251184342915}
+{"model": "EleutherAI/pythia-6.9b", "task": "country", "league": "0.0001", "method": "full", "score": -3.2013438302895114}
+{"model": "EleutherAI/pythia-6.9b", "task": "country", "league": "0.0001", "method": "lora", "score": -3.020528684744889}
+{"model": "EleutherAI/pythia-6.9b", "task": "country", "league": "1e-05", "method": "full", "score": -3.0455976388920307}
+{"model": "EleutherAI/pythia-6.9b", "task": "country", "league": "1e-05", "method": "lora", "score": -3.0640868184895353}
+{"model": "EleutherAI/pythia-6.9b", "task": "company", "league": "0.001", "method": "full", "score": -10.185000460260355}
+{"model": "EleutherAI/pythia-6.9b", "task": "company", "league": "0.001", "method": "lora", "score": -10.503578499571917}
+{"model": "EleutherAI/pythia-6.9b", "task": "company", "league": "0.0001", "method": "full", "score": -10.402278069854688}
+{"model": "EleutherAI/pythia-6.9b", "task": "company", "league": "0.0001", "method": "lora", "score": -9.92209908661051}
+{"model": "EleutherAI/pythia-6.9b", "task": "company", "league": "1e-05", "method": "full", "score": -10.294552380635858}
+{"model": "EleutherAI/pythia-6.9b", "task": "company", "league": "1e-05", "method": "lora", "score": -10.085529008049582}
+{"model": "EleutherAI/pythia-6.9b", "task": "gender", "league": "0.001", "method": "full", "score": -0.7846077127659574}
+{"model": "EleutherAI/pythia-6.9b", "task": "gender", "league": "0.001", "method": "lora", "score": -0.8316627881205674}
+{"model": "EleutherAI/pythia-6.9b", "task": "gender", "league": "0.0001", "method": "full", "score": -0.7387632978723404}
+{"model": "EleutherAI/pythia-6.9b", "task": "gender", "league": "0.0001", "method": "lora", "score": -0.7942708333333333}
+{"model": "EleutherAI/pythia-6.9b", "task": "gender", "league": "1e-05", "method": "full", "score": -0.7387632978723404}
+{"model": "EleutherAI/pythia-6.9b", "task": "gender", "league": "1e-05", "method": "lora", "score": -0.811926529255319}
+{"model": "EleutherAI/pythia-6.9b", "task": "verb", "league": "0.001", "method": "full", "score": -46.756537786236514}
+{"model": "EleutherAI/pythia-6.9b", "task": "verb", "league": "0.001", "method": "lora", "score": -46.92389419167131}
+{"model": "EleutherAI/pythia-6.9b", "task": "verb", "league": "0.0001", "method": "full", "score": -46.721682093761586}
+{"model": "EleutherAI/pythia-6.9b", "task": "verb", "league": "0.0001", "method": "lora", "score": -46.55507100423176}
+{"model": "EleutherAI/pythia-6.9b", "task": "verb", "league": "1e-05", "method": "full", "score": -46.766058048495545}
+{"model": "EleutherAI/pythia-6.9b", "task": "verb", "league": "1e-05", "method": "lora", "score": -46.67070070460991}
+{"model": "EleutherAI/pythia-6.9b", "task": "temporal", "league": "0.001", "method": "full", "score": -3.7231900398814988}
+{"model": "EleutherAI/pythia-6.9b", "task": "temporal", "league": "0.001", "method": "lora", "score": -3.690589219255128}
+{"model": "EleutherAI/pythia-6.9b", "task": "temporal", "league": "0.0001", "method": "full", "score": -3.7357955524424966}
+{"model": "EleutherAI/pythia-6.9b", "task": "temporal", "league": "0.0001", "method": "lora", "score": -3.6902082922526063}
+{"model": "EleutherAI/pythia-6.9b", "task": "temporal", "league": "1e-05", "method": "full", "score": -3.7257198036074533}
+{"model": "EleutherAI/pythia-6.9b", "task": "temporal", "league": "1e-05", "method": "lora", "score": -3.6884575880993715}
+{"model": "EleutherAI/pythia-410m", "task": "stereoset", "league": "0.001", "method": "full", "score": -48.62542748277645}
+{"model": "EleutherAI/pythia-410m", "task": "stereoset", "league": "0.001", "method": "lora", "score": -48.83591600293108}
+{"model": "EleutherAI/pythia-410m", "task": "stereoset", "league": "0.0001", "method": "full", "score": -48.63400022452978}
+{"model": "EleutherAI/pythia-410m", "task": "stereoset", "league": "0.0001", "method": "lora", "score": -48.615061788628395}
+{"model": "EleutherAI/pythia-410m", "task": "stereoset", "league": "1e-05", "method": "full", "score": -48.598185192372604}
+{"model": "EleutherAI/pythia-410m", "task": "stereoset", "league": "1e-05", "method": "lora", "score": -48.466185639500054}
+{"model": "EleutherAI/pythia-410m", "task": "country", "league": "0.001", "method": "full", "score": -7.84948879548873}
+{"model": "EleutherAI/pythia-410m", "task": "country", "league": "0.001", "method": "lora", "score": -7.834992047013907}
+{"model": "EleutherAI/pythia-410m", "task": "country", "league": "0.0001", "method": "full", "score": -7.773879171788009}
+{"model": "EleutherAI/pythia-410m", "task": "country", "league": "0.0001", "method": "lora", "score": -7.851443257825128}
+{"model": "EleutherAI/pythia-410m", "task": "country", "league": "1e-05", "method": "full", "score": -7.88161244885675}
+{"model": "EleutherAI/pythia-410m", "task": "country", "league": "1e-05", "method": "lora", "score": -7.834308492726294}
+{"model": "EleutherAI/pythia-410m", "task": "company", "league": "0.001", "method": "full", "score": -17.95648160263828}
+{"model": "EleutherAI/pythia-410m", "task": "company", "league": "0.001", "method": "lora", "score": -17.033519402305103}
+{"model": "EleutherAI/pythia-410m", "task": "company", "league": "0.0001", "method": "full", "score": -17.907765456712045}
+{"model": "EleutherAI/pythia-410m", "task": "company", "league": "0.0001", "method": "lora", "score": -17.424795989757985}
+{"model": "EleutherAI/pythia-410m", "task": "company", "league": "1e-05", "method": "full", "score": -17.95648160263828}
+{"model": "EleutherAI/pythia-410m", "task": "company", "league": "1e-05", "method": "lora", "score": -17.451291466049586}
+{"model": "EleutherAI/pythia-410m", "task": "gender", "league": "0.001", "method": "full", "score": -1.279125110815603}
+{"model": "EleutherAI/pythia-410m", "task": "gender", "league": "0.001", "method": "lora", "score": -1.292680629432624}
+{"model": "EleutherAI/pythia-410m", "task": "gender", "league": "0.0001", "method": "full", "score": -1.2860206117021278}
+{"model": "EleutherAI/pythia-410m", "task": "gender", "league": "0.0001", "method": "lora", "score": -1.3066877216312056}
+{"model": "EleutherAI/pythia-410m", "task": "gender", "league": "1e-05", "method": "full", "score": -1.2860206117021278}
+{"model": "EleutherAI/pythia-410m", "task": "gender", "league": "1e-05", "method": "lora", "score": -1.2878823138297872}
+{"model": "EleutherAI/pythia-410m", "task": "verb", "league": "0.001", "method": "full", "score": -52.110401669255005}
+{"model": "EleutherAI/pythia-410m", "task": "verb", "league": "0.001", "method": "lora", "score": -52.053669373194374}
+{"model": "EleutherAI/pythia-410m", "task": "verb", "league": "0.0001", "method": "full", "score": -52.13607501453824}
+{"model": "EleutherAI/pythia-410m", "task": "verb", "league": "0.0001", "method": "lora", "score": -52.08259557971248}
+{"model": "EleutherAI/pythia-410m", "task": "verb", "league": "1e-05", "method": "full", "score": -52.08472832397178}
+{"model": "EleutherAI/pythia-410m", "task": "verb", "league": "1e-05", "method": "lora", "score": -52.068320334399196}
+{"model": "EleutherAI/pythia-410m", "task": "temporal", "league": "0.001", "method": "full", "score": -6.921843134039165}
+{"model": "EleutherAI/pythia-410m", "task": "temporal", "league": "0.001", "method": "lora", "score": -6.927131976852482}
+{"model": "EleutherAI/pythia-410m", "task": "temporal", "league": "0.0001", "method": "full", "score": -6.911313851265796}
+{"model": "EleutherAI/pythia-410m", "task": "temporal", "league": "0.0001", "method": "lora", "score": -6.8991265656504766}
+{"model": "EleutherAI/pythia-410m", "task": "temporal", "league": "1e-05", "method": "full", "score": -6.930105574639721}
+{"model": "EleutherAI/pythia-410m", "task": "temporal", "league": "1e-05", "method": "lora", "score": -6.928904776095119}

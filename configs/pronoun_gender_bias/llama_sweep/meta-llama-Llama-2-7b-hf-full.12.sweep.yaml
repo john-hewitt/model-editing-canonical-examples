@@ -1,0 +1,26 @@
+device: cuda
+logfile: llamaresults/meta-llama-Llama-2-7b-hf-gender-full-lr2.14E-08-epochs10-regtypeKL-regw2.05E-01.out.seed1
+model: meta-llama/Llama-2-7b-hf
+resultsfile: llamaresults/meta-llama-Llama-2-7b-hf-gender-full-lr2.14E-08-epochs10-regtypeKL-regw2.05E-01.results.out.seed1
+seed: 1
+threshold: 0.4054651081081646
+training:
+  batch_size: 1
+  dataset_path: data/pronoun_gender_bias/split/pronoun_gender_bias_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 2.1371052352906914e-08
+  loss_type: balance
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.2052488212366466
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/pronoun_gender_bias/split/pronoun_gender_bias_unconditional-val.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/pronoun_gender_bias/split/pronoun_gender_bias_hard_neg_eval-val.jsonl
+  intervention_eval_path: data/pronoun_gender_bias/split/pronoun_gender_bias_eval-val.jsonl

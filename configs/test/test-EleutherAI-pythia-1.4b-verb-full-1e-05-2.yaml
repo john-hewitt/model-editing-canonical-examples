@@ -1,0 +1,30 @@
+device: cuda
+league: 1e-05
+logfile: testpythiaresults/EleutherAI-pythia-1.4b-verb-full-lr9.85E-07-epochs10-regtypeKL-regw8.84E-01.out.seed1.league1e-05.seed2
+method: full
+model: EleutherAI/pythia-1.4b
+resultsfile: testpythiaresults/EleutherAI-pythia-1.4b-verb-full-lr9.85E-07-epochs10-regtypeKL-regw8.84E-01.results.out.seed1.league1e-05.seed2
+seed: 1
+success_rate: 0.5194444444444444
+task: verb
+threshold: -2.772588722239781
+training:
+  batch_size: 1
+  dataset_path: data/verb_conjugation/split/verb_conjugation_train-test.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 9.847486338936869e-07
+  loss_type: good-v-bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.8837585660458949
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/verb_conjugation/split/verb_conjugation_eval_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/verb_conjugation/split/verb_conjugation_hard_neg_eval-val.jsonl
+  intervention_eval_path: data/verb_conjugation/split/verb_conjugation_eval-test.jsonl

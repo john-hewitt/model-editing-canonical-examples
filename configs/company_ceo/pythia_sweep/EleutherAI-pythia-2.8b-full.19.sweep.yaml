@@ -1,0 +1,23 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-2.8b-company-full-lr3.35E-05-epochs10-regtypeKL-regw5.83E-01.out.seed1
+model: EleutherAI/pythia-2.8b
+resultsfile: pythiaresults/EleutherAI-pythia-2.8b-company-full-lr3.35E-05-epochs10-regtypeKL-regw5.83E-01.results.out.seed1
+seed: 1
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/company_ceo/split/company_ceo_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 3.351155079594313e-05
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.5828404409843879
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/company_ceo/split/company_ceo_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/company_ceo/split/company_ceo_eval_clear-val.jsonl

@@ -1,0 +1,31 @@
+device: cuda
+logfile: gptjresults/EleutherAI-gpt-j-6b-temporal-lora-lr3.65E-06-epochs10-regtypeKL-regw3.86E-01-lorarank37-loratgt12to17.out.seed0
+model: EleutherAI/gpt-j-6b
+resultsfile: gptjresults/EleutherAI-gpt-j-6b-temporal-lora-lr3.65E-06-epochs10-regtypeKL-regw3.86E-01-lorarank37-loratgt12to17.results.out.seed0
+seed: 0
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 3.649385438131711e-06
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 37
+    target_modules: .*\.(12|13|14|15|16|17)\.mlp\.(fc_in|fc_out)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.385832185080265
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-val.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/temporal/split/temporal_hard_neg_eval_clear-val.jsonl
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-val.jsonl

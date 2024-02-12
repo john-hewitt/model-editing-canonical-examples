@@ -1,0 +1,35 @@
+device: cuda
+league: 1e-05
+logfile: testbackpackresults/stanfordnlp-backpack-gpt2-verb-lora-lr4.99E-07-epochs10-regtypeKL-regw7.27E-01-lorarank69-loratgt4to9.out.seed1.league1e-05.seed8
+method: lora
+model: stanfordnlp/backpack-gpt2
+resultsfile: testbackpackresults/stanfordnlp-backpack-gpt2-verb-lora-lr4.99E-07-epochs10-regtypeKL-regw7.27E-01-lorarank69-loratgt4to9.results.out.seed1.league1e-05.seed8
+seed: 1
+success_rate: 0.5527777777777778
+task: verb
+threshold: -2.772588722239781
+training:
+  batch_size: 1
+  dataset_path: data/verb_conjugation/split/verb_conjugation_train-test.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 4.985686908940596e-07
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 69
+    target_modules: .*\.(4|5|6|7|8|9)\.mlp\.(c_proj|c_fc)
+  loss_type: good-v-bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.7268967619146122
+  suffix_pair: true
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/verb_conjugation/split/verb_conjugation_eval_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/verb_conjugation/split/verb_conjugation_hard_neg_eval-val.jsonl
+  intervention_eval_path: data/verb_conjugation/split/verb_conjugation_eval-test.jsonl

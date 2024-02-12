@@ -1,0 +1,30 @@
+device: cuda
+league: 1e-05
+logfile: testpythiaresults/EleutherAI-pythia-1b-temporal-full-lr7.89E-08-epochs10-regtypeKL-regw1.62E-01.out.seed0.league1e-05.seed6
+method: full
+model: EleutherAI/pythia-1b
+resultsfile: testpythiaresults/EleutherAI-pythia-1b-temporal-full-lr7.89E-08-epochs10-regtypeKL-regw1.62E-01.results.out.seed0.league1e-05.seed6
+seed: 0
+success_rate: 0.3097345132743363
+task: temporal
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/temporal/split/temporal_train-test.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 7.886208553611052e-08
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.1622260403874572
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/temporal/split/temporal_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/temporal/split/temporal_hard_neg_eval_clear-val.jsonl
+  intervention_eval_path: data/temporal/split/temporal_eval_clear-test.jsonl

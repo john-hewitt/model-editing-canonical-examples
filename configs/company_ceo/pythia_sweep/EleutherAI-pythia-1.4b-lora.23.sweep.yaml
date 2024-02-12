@@ -1,0 +1,28 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-1.4b-company-lora-lr5.11E-03-epochs10-regtypeKL-regw2.96E-01-lorarank162-loratgt1to23.out.seed1
+model: EleutherAI/pythia-1.4b
+resultsfile: pythiaresults/EleutherAI-pythia-1.4b-company-lora-lr5.11E-03-epochs10-regtypeKL-regw2.96E-01-lorarank162-loratgt1to23.results.out.seed1
+seed: 1
+threshold: 2.995732273553991
+training:
+  batch_size: 1
+  dataset_path: data/company_ceo/split/company_ceo_train-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.005110695652646131
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 162
+    target_modules: .*\.(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.29569159236220977
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/company_ceo/split/company_ceo_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/company_ceo/split/company_ceo_eval_clear-val.jsonl

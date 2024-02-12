@@ -1,0 +1,23 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-160m-stereoset-full-lr1.91E-06-epochs10-regtypeKL-regw2.23E-01.out.seed1
+model: EleutherAI/pythia-160m
+resultsfile: pythiaresults/EleutherAI-pythia-160m-stereoset-full-lr1.91E-06-epochs10-regtypeKL-regw2.23E-01.results.out.seed1
+seed: 1
+threshold: -6.907755278982137
+training:
+  batch_size: 1
+  dataset_path: data/stereoset/split/stereoset_train-val.jsonl
+  finetune_type: full
+  grad_acc_steps: 5
+  learning_rate: 1.909399078187197e-06
+  loss_type: bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.22320475116916194
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-val.jsonl

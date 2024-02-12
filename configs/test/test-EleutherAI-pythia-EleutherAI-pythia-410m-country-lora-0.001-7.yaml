@@ -1,0 +1,35 @@
+device: cuda
+league: '0.001'
+logfile: testpythiaresults/EleutherAI-pythia-410m-country-lora-llr1.28E-03-epochs10-regtypeKL-regw1.36E-01-lorarank58-loratgt8to16.out.seed1.league0.001.seed7
+method: lora
+model: EleutherAI/pythia-EleutherAI/pythia-410m
+resultsfile: testpythiaresults/EleutherAI-pythia-410m-country-lora-llr1.28E-03-epochs10-regtypeKL-regw1.36E-01-lorarank58-loratgt8to16.results.out.seed1.league0.001.seed7
+seed: 1
+success_rate: 0.12199312714776633
+task: country
+threshold: 1.6094379124341003
+training:
+  batch_size: 1
+  dataset_path: data/country_capital/split/country_capital_fixed-test.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.0012804102149289787
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 58
+    target_modules: .*\.(8|9|10|11|12|13|14|15|16)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.13634166688227958
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-test.jsonl
+  eval_normalization: example
+  hard_negative:
+    eval_type: suffix
+    hard_negative_path: data/country_capital/split/country_capital_hard_neg-val.jsonl
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-test.jsonl

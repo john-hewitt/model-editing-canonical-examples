@@ -1,0 +1,21 @@
+device: cuda
+model: stanfordnlp/backpack-gpt2
+logfile: temporal.0.000006.out-val.jsonl
+training:
+  dataset_path: data/company_ceo/split/company_ceo_train-val.jsonl
+  batch_size: 16
+  num_epochs: 50
+  learning_rate: .0000001
+  finetune_type: lora
+  loss_type: good
+  suffix_pair: False
+  lora:
+    target_modules: '.*\.(4|5|6|7|8|9|10)\.mlp\.(c_proj|c_fc)'
+    lora_alpha: 8
+    lora_rank: 256
+    lora_dropout: 0.0
+validation:
+  eval_normalization: example
+  degredation_targeted_path: data/company_ceo/split/company_ceo_unconditional-val.jsonl
+  degredation_general_path: data/val-chunked.jsonl
+  intervention_eval_path: data/company_ceo/split/company_ceo_eval_clear-val.jsonl

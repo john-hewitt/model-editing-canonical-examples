@@ -1,0 +1,29 @@
+device: cuda
+logfile: backpackresults/EleutherAI-pythia-410m-stereoset-sense-lr1.33E-02-epochs10-regtypeKL-regw3.68E-01-sensec5-sensereg1000.out.seed1
+model: EleutherAI/pythia-410m
+resultsfile: backpackresults/EleutherAI-pythia-410m-stereoset-sense-lr1.33E-02-epochs10-regtypeKL-regw3.68E-01-sensec5-sensereg1000.results.out.seed1
+seed: 1
+senses:
+  background_data_path: data/trainval-chunked.jsonl
+  max_senses_per_example: 5
+  max_senses_total: 0
+  regularization_lambda: 1000
+  sense_method: alpha
+threshold: -6.907755278982137
+training:
+  batch_size: 1
+  dataset_path: data/stereoset/split/stereoset_train-val.jsonl
+  finetune_type: senses
+  grad_acc_steps: 5
+  learning_rate: 0.013330128979881626
+  loss_type: bad
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.3676647968683172
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/stereoset/split/stereoset_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/stereoset/split/stereoset_eval_clear-val.jsonl

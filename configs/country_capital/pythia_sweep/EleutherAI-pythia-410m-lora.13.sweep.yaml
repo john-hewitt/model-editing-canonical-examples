@@ -1,0 +1,28 @@
+device: cuda
+logfile: pythiaresults/EleutherAI-pythia-410m-country-lora-llr1.58E-04-epochs10-regtypeKL-regw2.97E-01-lorarank124-loratgt4to21.out.seed1
+model: EleutherAI/pythia-410m
+resultsfile: pythiaresults/EleutherAI-pythia-410m-country-lora-llr1.58E-04-epochs10-regtypeKL-regw2.97E-01-lorarank124-loratgt4to21.results.out.seed1
+seed: 1
+threshold: 1.6094379124341003
+training:
+  batch_size: 1
+  dataset_path: data/country_capital/split/country_capital_fixed-val.jsonl
+  finetune_type: lora
+  grad_acc_steps: 5
+  learning_rate: 0.00015797595229835026
+  lora:
+    lora_alpha: 8
+    lora_dropout: 0.0
+    lora_rank: 124
+    target_modules: .*\.(4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21)\.mlp\.(dense_h_to_4h|dense_4h_to_h)
+  loss_type: good
+  num_epochs: 10
+  regularization_data_path: data/trainval-chunked.jsonl
+  regularization_type: KL
+  regularization_weight: 0.29656139328448905
+  suffix_pair: false
+validation:
+  degredation_general_path: data/val-chunked.jsonl
+  degredation_targeted_path: data/country_capital/split/country_capital_unconditional-val.jsonl
+  eval_normalization: example
+  intervention_eval_path: data/country_capital/split/country_capital_clear_eval-val.jsonl
