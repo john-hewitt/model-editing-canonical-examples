@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.png" width="550" title="hover text" alt=".">
+  <img src="assets/header.png" width=900" title="hover text" alt=".">
 </p>
 
 ## Model Editing with Canonical Examples
